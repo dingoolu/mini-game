@@ -27,6 +27,7 @@ import java.util.concurrent.Executors;
  */
 public abstract class MiniGame extends Game {
 
+    public static final String assertBasePath = "D:/个人/game/NS/assets/";
     // 线程执行器
     public static ExecutorService executorService = Executors.newCachedThreadPool(new MiniThreadFactory());
     // 随机生成器
@@ -107,7 +108,7 @@ public abstract class MiniGame extends Game {
         List<String> picturePaths = Lists.newArrayList(MiniGameSourcePath.PICTURE_PATHS);
         picturePaths.addAll(getPicturePaths());
         for (String path : picturePaths) {
-            File picDir = new File(path);
+            File picDir = new File(assertBasePath+path);
             for (File pic : Objects.requireNonNull(picDir.listFiles())) {
                 assetManager.load(pic.getPath(), Texture.class);
             }
@@ -117,7 +118,7 @@ public abstract class MiniGame extends Game {
         List<String> soundPaths = Lists.newArrayList(MiniGameSourcePath.SOUND_PATHS);
         soundPaths.addAll(getSoundPaths());
         for (String path : soundPaths) {
-            File soundDir = new File(path);
+            File soundDir = new File(assertBasePath+path);
             for (File sound : Objects.requireNonNull(soundDir.listFiles())) {
                 String soundPath = sound.getPath();
                 if (soundPath.matches(".*ogg$")) {

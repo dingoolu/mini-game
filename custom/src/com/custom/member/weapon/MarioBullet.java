@@ -79,7 +79,7 @@ public class MarioBullet extends GameSprite {
 
     @Override
     protected void initAnimations() {
-        Texture texture = MiniGame.assetManager.get("members/mario1.png", Texture.class);
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/mario1.png", Texture.class);
         currentAnimation = AnimationAssist.createAnimation(texture, Lists.newArrayList(
                 new AnimationAssist.Bound(287, 287, 18, 15)
         ), MiniGameConfig.getScreenSettingFrameDuration(), 0, Animation.PlayMode.LOOP);

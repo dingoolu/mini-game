@@ -113,7 +113,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationQuiet() {
-        Texture texture = MiniGame.assetManager.get("members/chunli7.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli7.png");
         int perW = texture.getWidth() / 4;
         int perH = texture.getHeight() / 3;
         insertAnimation(ChunLiStatus.QUIET, GameSpriteDirection.R, AnimationAssist.createAnimation(texture, Lists.newArrayList(
@@ -125,7 +125,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationWalk() {
-        Texture texture = MiniGame.assetManager.get("members/chunli7.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli7.png");
         int perW = texture.getWidth() / 4;
         int perH = texture.getHeight() / 3;
         insertAnimation(ChunLiStatus.WALK, GameSpriteDirection.R, AnimationAssist.createAnimation(texture, Lists.newArrayList(
@@ -155,7 +155,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationJump() {
-        Texture texture = MiniGame.assetManager.get("members/chunli1.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli1.png");
         insertAnimation(ChunLiStatus.JUMP, GameSpriteDirection.R,
                 AnimationAssist.createAnimation(texture, texture.getWidth() / 4, texture.getHeight() / 2, 8, MiniGameConfig.getScreenSettingFrameDuration(), 0, Animation.PlayMode.LOOP));
         insertAnimation(ChunLiStatus.JUMP, GameSpriteDirection.L,
@@ -163,7 +163,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationLandfall() {
-        Texture texture = MiniGame.assetManager.get("members/chunli9.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli9.png");
         insertAnimation(ChunLiStatus.LANDFALL, GameSpriteDirection.R,
                 AnimationAssist.createAnimation(texture, texture.getWidth() / 3, texture.getHeight() / 3, 8, MiniGameConfig.getScreenSettingFrameDuration(), 1, Animation.PlayMode.LOOP));
         insertAnimation(ChunLiStatus.LANDFALL, GameSpriteDirection.L,
@@ -171,7 +171,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationSquat() {
-        Texture texture = MiniGame.assetManager.get("members/chunli8.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli8.png");
         insertAnimation(ChunLiStatus.SQUAT, GameSpriteDirection.R,
                 AnimationAssist.createAnimation(texture, Lists.newArrayList(new AnimationAssist.Bound(230, 250, 124, 104)), MiniGameConfig.getScreenSettingFrameDuration(), 1, Animation.PlayMode.LOOP));
         insertAnimation(ChunLiStatus.SQUAT, GameSpriteDirection.L,
@@ -179,7 +179,7 @@ public class ChunLi extends Protagonist {
     }
 
     private void initAnimationCrackedFeet() {
-        Texture texture = MiniGame.assetManager.get("members/chunli4.png");
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli4.png");
         Animation animation = AnimationAssist.createAnimation(texture, texture.getWidth() / 2, texture.getHeight() / 4, 8, MiniGameConfig.getScreenSettingFrameDuration(), 0, null);
         MiniAnimation miniAnimation = new MiniAnimation(animation, getDrawW(), getDrawH());
         MiniAnimationHolder miniAnimationHolder = MiniAnimationHolderAssist.createMiniAnimationHolder(miniAnimation);
@@ -215,11 +215,11 @@ public class ChunLi extends Protagonist {
 
     private void initAnimationQiGong() {
         // 右
-        Texture texture1 = MiniGame.assetManager.get("members/chunli6.png");
+        Texture texture1 = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli6.png");
         Animation animation1 = AnimationAssist.createAnimation(texture1, texture1.getWidth() / 3, texture1.getHeight() / 6, 13, MiniGameConfig.getScreenSettingFrameDuration(), 0, null);
         MiniAnimation miniAnimation1 = new MiniAnimation(animation1, getDrawW(), getDrawH());
 
-        Texture texture2 = MiniGame.assetManager.get("members/chunli5.png");
+        Texture texture2 = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli5.png");
         Animation animation2 = AnimationAssist.createAnimation(texture2, texture2.getWidth() / 3, texture2.getHeight() / 5, 15, MiniGameConfig.getScreenSettingFrameDuration(), 0, null);
         MiniAnimation miniAnimation2 = new MiniAnimation(animation2, getDrawW(), getDrawH());
         MiniAnimationHolder miniAnimationHolder = new MiniAnimationHolder(ChunLiStatus.QI_GONG.name() + GameSpriteDirection.R.name());
@@ -246,11 +246,11 @@ public class ChunLi extends Protagonist {
         insertMiniAnimationHolder(ChunLiStatus.QI_GONG, GameSpriteDirection.R, miniAnimationHolder);
 
         // 左
-        texture1 = MiniGame.assetManager.get("members/chunli6.png");
+        texture1 = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli6.png");
         animation1 = AnimationAssist.createAnimation(texture1, texture1.getWidth() / 3, texture1.getHeight() / 6, 13, MiniGameConfig.getScreenSettingFrameDuration(), 1, null);
         miniAnimation1 = new MiniAnimation(animation1, getDrawW(), getDrawH());
 
-        texture2 = MiniGame.assetManager.get("members/chunli5.png");
+        texture2 = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/chunli5.png");
         animation2 = AnimationAssist.createAnimation(texture2, texture2.getWidth() / 3, texture2.getHeight() / 5, 15, MiniGameConfig.getScreenSettingFrameDuration(), 1, null);
         miniAnimation2 = new MiniAnimation(animation2, getDrawW(), getDrawH());
         miniAnimationHolder = new MiniAnimationHolder(ChunLiStatus.QI_GONG.name() + GameSpriteDirection.L.name());

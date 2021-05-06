@@ -29,7 +29,7 @@ public class InitialScreen extends BaseScreen {
 
     @Override
     protected void initCustom() {
-        MiniGame.soundPlayer.playMusic("sounds/init.mp3");
+        MiniGame.soundPlayer.playMusic(MiniGame.assertBasePath+"sounds/init.mp3");
     }
 
     @Override

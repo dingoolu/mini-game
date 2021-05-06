@@ -123,7 +123,7 @@ public class Protagonist extends GameSprite {
 
     @Override
     protected void initAnimations() {
-        Texture texture = MiniGame.assetManager.get("members/mario1.png", Texture.class);
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"members/mario1.png", Texture.class);
 
         // 初始化右走动画
         TextureRegion[] regions = new TextureRegion[3];

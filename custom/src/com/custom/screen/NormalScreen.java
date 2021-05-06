@@ -111,7 +111,7 @@ public class NormalScreen extends BaseScreen {
 
     @Override
     protected void initMap() {
-        tileMap = new TmxMapLoader().load("maps/game_screen" + MiniGame.getAttributeInt(CustomGameAttributeNames.CURRENT_LEVEL) + ".tmx");
+        tileMap = new TmxMapLoader().load(MiniGame.assertBasePath+"maps/game_screen" + MiniGame.getAttributeInt(CustomGameAttributeNames.CURRENT_LEVEL) + ".tmx");
 
         tileMapUnitSize = tileMap.getProperties().get("tilewidth", Integer.class);
         mapCountW = tileMap.getProperties().get("width", Integer.class);

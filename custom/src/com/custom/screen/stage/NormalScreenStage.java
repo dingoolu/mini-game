@@ -38,7 +38,7 @@ public class NormalScreenStage extends BaseStage {
     }
 
     private void createTouchPad() {
-        Texture texture = MiniGame.assetManager.get("menus/control.png", Texture.class);
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"menus/control.png", Texture.class);
         TextureRegionDrawable pane = new TextureRegionDrawable(new TextureRegion(texture, 0, 0, 318, 318));
         TextureRegionDrawable knob = new TextureRegionDrawable(new TextureRegion(texture, 318, 135, 52, 52));
 
@@ -51,7 +51,7 @@ public class NormalScreenStage extends BaseStage {
     private void createButton() {
         initButtonListener();
 
-        Texture texture = MiniGame.assetManager.get("menus/menu1.png", Texture.class);
+        Texture texture = MiniGame.assetManager.get(MiniGame.assertBasePath+"menus/menu1.png", Texture.class);
         TextureRegion[][] regions = TextureRegion.split(texture, 64, 64);
 
         Image buttonB = new Image(regions[1][0]);
@@ -68,14 +68,14 @@ public class NormalScreenStage extends BaseStage {
         buttonA.addListener(buttonListener);
         addActor(buttonA);
 
-        Image buttonI = new Image(new TextureRegion(MiniGame.assetManager.get("menus/menu2.png", Texture.class), 26, 14, 400, 400));
+        Image buttonI = new Image(new TextureRegion(MiniGame.assetManager.get(MiniGame.assertBasePath+"menus/menu2.png", Texture.class), 26, 14, 400, 400));
         buttonI.setWidth(buttonB.getWidth());
         buttonI.setHeight(buttonB.getHeight());
         buttonI.setPosition(getViewW() - buttonI.getWidth(), buttonI.getHeight() * 3.4f);
         buttonI.addListener(buttonListener);
         addActor(buttonI);
 
-        Image buttonP = new Image(new TextureRegion(MiniGame.assetManager.get("menus/menu2.png", Texture.class), 432, 14, 400, 400));
+        Image buttonP = new Image(new TextureRegion(MiniGame.assetManager.get(MiniGame.assertBasePath+"menus/menu2.png", Texture.class), 432, 14, 400, 400));
         buttonP.setWidth(buttonB.getWidth());
         buttonP.setHeight(buttonB.getHeight());
         buttonP.setPosition(getViewW() - buttonP.getWidth(), buttonP.getHeight() * 4.7f);
@@ -140,7 +140,7 @@ public class NormalScreenStage extends BaseStage {
     }
 
     private void createLabel() {
-        BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal("scripts/inf.fnt"));
+        BitmapFont bitmapFont = new BitmapFont(Gdx.files.internal(MiniGame.assertBasePath+"scripts/inf.fnt"));
         Label.LabelStyle style = new Label.LabelStyle(bitmapFont, bitmapFont.getColor());
 
         Label labelHP = new Label("HP:", style);
@@ -153,7 +153,7 @@ public class NormalScreenStage extends BaseStage {
         labelMP.setPosition(0, getViewH() - labelHP.getHeight() - labelMP.getHeight());
         addActor(labelMP);
 
-        Image imageScore = new Image(new TextureRegion(MiniGame.assetManager.get("menus/score.png", Texture.class), 295, 171, 475, 242));
+        Image imageScore = new Image(new TextureRegion(MiniGame.assetManager.get(MiniGame.assertBasePath+"menus/score.png", Texture.class), 295, 171, 475, 242));
         imageScore.setSize(300, 67);
         imageScore.setPosition(getViewW() - imageScore.getWidth(), getViewH() - imageScore.getHeight());
         addActor(imageScore);
