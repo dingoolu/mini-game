@@ -33,7 +33,7 @@ public class MiniGameConfig {
     private static JSONObject physicalSetting;
 
     public static void load() {
-        FileHandle handle = Gdx.files.internal("miniGameConfig.json");
+        FileHandle handle = Gdx.files.internal(MiniGame.assertBasePath+"miniGameConfig.json");
         if (!handle.exists()) {
             return;
         }

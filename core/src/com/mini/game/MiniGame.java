@@ -27,7 +27,7 @@ import java.util.concurrent.Executors;
  */
 public abstract class MiniGame extends Game {
 
-    public static final String assertBasePath = "D:/个人/game/NS/assets/";
+    public static final String assertBasePath = "D:/work/assets/";
     // 线程执行器
     public static ExecutorService executorService = Executors.newCachedThreadPool(new MiniThreadFactory());
     // 随机生成器
